@@ -36,9 +36,30 @@
 <!-- CSS FILES -->
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/animate.min.css">
-<link rel="stylesheet" href="css/swiper.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<style>
+  .logos img {
+    width: 60px !important;
+    height: 60px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  .logos .container .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-wrapper {
+  transition-timing-function: linear !important;
+  }
+
+</style>
 </head>
 <body>
 <div class="preloader"> 
@@ -66,7 +87,7 @@
 <header class="header">
   <div class="slider">
     <div class="swiper-container gallery-top">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper swiper-logos">
         <div class="swiper-slide">
           <div class="slide-inner bg-image" data-background="images/slide01.jpg"> </div>
           <!-- end slide-inner --> 
@@ -81,6 +102,11 @@
           <div class="slide-inner bg-image" data-background="images/slide03.jpg"> </div>
           <!-- end slide-inner --> 
         </div>
+        <div class="swiper-slide">
+          <div class="slide-inner bg-image" data-background="images/slide04.jpg"> </div>
+          
+          <!-- end slide-inner - onur burayı --> 
+        </div>
         <!-- end swiper-slide --> 
       </div>
       <!-- Add Arrows -->
@@ -88,18 +114,37 @@
     </div>
     <div class="swiper-container gallery-thumbs">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"> Web Tasarım<a href="#works">Örnekleri incele
-          <div class="plus">+</div>
-          </a> </div>
+        <div class="swiper-slide"> 
+          <div>Web Tasarım</div>
+          <a href="#works">
+            Örnekleri incele
+            <i class="fa fa-caret-right"></i>
+          </a> 
+        </div>
         <!-- end swiper-slide -->
-        <div class="swiper-slide"> Baskılı İşler<a href="#works">Örnekleri incele
-          <div class="plus">+</div>
-          </a> </div>
+        <div class="swiper-slide"> 
+          <div>Baskılı İşler</div>
+          <a href="#works">
+            Örnekleri incele
+            <i class="fa fa-caret-right"></i>
+          </a> 
+        </div>
         <!-- end swiper-slide -->
-        <div class="swiper-slide"> Kurumsal Kimlik<a href="#works">Örnekleri incele
-          <div class="plus">+</div>
-          </a> </div>
+        <div class="swiper-slide">
+          <div>Kurumsal Kimlik</div>
+          <a href="#works">
+            Örnekleri incele
+            <i class="fa fa-caret-right"></i>
+          </a> 
+        </div>
         <!-- end swiper-slide --> 
+        <div class="swiper-slide">
+          <div>Onur burayı</div>
+          <a href="#works">
+            Örnekleri incele
+            <i class="fa fa-caret-right"></i>
+          </a> 
+        </div>
       </div>
     </div>
   </div>
@@ -115,7 +160,36 @@
 <div class="header-spacing"></div>
 <!-- end header-spacing -->
 <main>
+  <section class="works" id="works" style="background-color: white; padding-top: 75px;">
+    <h3 style="text-align: center; margin-bottom: 50px; width: 100%;">Web Tasarım</h3>
+  <ul>
+    <li class="wow fadeInUp"><a href="case-details.html">
+      <figure data-tilt> <img src="images/works_1.jpg" alt="Image" class="thumb">
+        <figcaption> <img src="images/logo.png" alt="Image" class="brand">
+          <h3>Yellow Ginger</h3>
+          <small>UI-UX Design, WordPress</small></figcaption>
+      </figure></a>
+    </li>
+    <li class="wow fadeInUp"><a href="case-details.html">
+      <figure data-tilt> <img src="images/works_2.jpg" alt="Image" class="thumb">
+        <figcaption> <img src="images/logo.png" alt="Image" class="brand">
+          <h3>Red Tomato</h3>
+          <small>Web Design, HTML, Development</small> </figcaption>
+      </figure></a>
+    </li>
+    <li class="wow fadeInUp"><a href="case-details.html">
+      <figure data-tilt> <img src="images/works_3.jpg" alt="Image" class="thumb">
+        <figcaption> <img src="images/logo.png" alt="Image" class="brand">
+          <h3>Mr. Washington</h3>
+          <small>App Development, UI-UX Design</small></figcaption>
+      </figure></a>
+    </li>
+    </ul>
+</section>
+
+
 <section class="works" id="works">
+  <h3 style="text-align: center; margin-bottom: 50px; width: 100%; color: white;">Tasarım Projeleri</h3>
   <ul>
     <li class="wow fadeInUp"><a href="case-details.html">
       <figure data-tilt> <img src="images/works_1.jpg" alt="Image" class="thumb">
@@ -208,6 +282,7 @@
 <!-- end works -->
 <section class="features-content">
   <div class="container">
+
     <div class="row">
       <div class="col-lg-5 wow fadeInLeft">
         <h2>Doğru <br> Yerdesiniz!</h2>
@@ -253,33 +328,23 @@
 <!-- end features-content -->
 <section class="logos">
   <div class="container">
-    <ul>
-      <li class="wow fadeInUp">
-        <figure> <img src="images/Başkent_Üniversitesi_logo.svg" alt="Başkent_Üniversitesi_logo">
-          <h6>BAŞKENT ÜNİVERSİTESİ HASTANELERİ</h6>
-        </figure>
-      </li>
-      <li class="wow fadeInUp">
-        <figure> <img src="images/bp_logo.svg" alt="bp_logo">
-          <h6>BP TÜRKİYE</h6>
-        </figure>
-      </li>
-      <li class="wow fadeInUp">
-        <figure> <img src="images/musiad_logo.svg" alt="Musiad_Logo">
-          <h6>MÜSİAD</h6>
-        </figure>
-      </li>
-      <li class="wow fadeInUp">
-        <figure> <img src="images/Zara_Logo.svg" alt="Zara_Logo">
-          <h6>ZARA</h6>
-        </figure>
-      </li>
-      <li class="wow fadeInUp">
-        <figure> <img src="images/pizza_house_logo.svg" alt="pizza_house_logo">
-          <h6>PİZZA HOUSE</h6>
-        </figure>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-hash="slide1"><figure><img src="images/Başkent_Üniversitesi_logo.svg" alt="Başkent_Üniversitesi_logo" ></figure></div>
+          <div class="swiper-slide" data-hash="slide2"><img src="images/bp_logo.svg" alt="bp_logo"></div>
+          <div class="swiper-slide" data-hash="slide3"><img src="images/musiad_logo.svg" alt="Musiad_Logo"></div>
+          <div class="swiper-slide" data-hash="slide4"><img src="images/Zara_Logo.svg" alt="Zara_Logo"></div>
+          <div class="swiper-slide" data-hash="slide5"><img src="images/pizza_house_logo.svg" alt="pizza_house_logo"></div>
+          <div class="swiper-slide" data-hash="slide6"><figure><img src="images/Başkent_Üniversitesi_logo.svg" alt="Başkent_Üniversitesi_logo" ></figure></div>
+          <div class="swiper-slide" data-hash="slide7"><img src="images/bp_logo.svg" alt="bp_logo"></div>
+          <div class="swiper-slide" data-hash="slide8"><img src="images/musiad_logo.svg" alt="Musiad_Logo"></div>
+          <div class="swiper-slide" data-hash="slide9"><img src="images/Zara_Logo.svg" alt="Zara_Logo"></div>
+          <div class="swiper-slide" data-hash="slide10"><img src="images/pizza_house_logo.svg" alt="pizza_house_logo"></div>
+          
+        </div>
+      </div>
+    </div>
   </div>
 </div>
   <!-- end container -->
@@ -320,6 +385,23 @@
 <script src='js/jquery.parallax.min.js'></script>  
 <script src='js/motion.blur.js'></script> 
 <script src="js/scripts.js"></script> 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+const swiper = new Swiper(".swiper", {
+    autoplay: {
+      delay: 0,
+    },
+    centeredSlides: true,
+    loop: true,
+    speed: 1500,
+    slidesPerView: 5,
+    disableOnInteraction: false,
+    spaceBetween: 30,
+    resizeObserver: true,
+  });
+</script>
 
 </body>
 </html>
