@@ -52,6 +52,10 @@ theme.
   outline: none !important;
 }
 
+a{
+  cursor: pointer !important;
+}
+
 body {
   font-size: 16px;
   background: #131313;
@@ -1613,6 +1617,10 @@ a:hover {
   text-decoration: none;
 }
 
+.works img{
+  border-radius: 1rem;
+}
+
 /* WORKS FILTER */
 .filter-bar {
   width: 100%;
@@ -2928,12 +2936,35 @@ a:hover {
   margin: 0px 0px 20px 0px;
 }
 
+.website-project-section {
+  width: 100%;
+  background: white;
+  padding: 5rem 0 12rem 0;
+}
+.website-project-section h3{
+  text-align: center;
+  margin-bottom: 5rem;
+  width: 100%;
+  color: black;
+  font-weight: 600;
+}
+.website-project-section > div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap:1rem;
+  row-gap: 6rem;
+}
+
 .website-card-container {
+  width: 20rem;
   position: relative;
   border-radius: 1rem;
   padding: 2rem;
   padding-bottom: 10rem;
   text-align: center;
+  border-radius: 1rem;
 }
 .website-card-container h3 {
   font-size: 2rem;
@@ -2952,6 +2983,7 @@ a:hover {
   left: 50%;
   transform: translateX(-50%);
   top: 10rem;
+  border-radius: 1rem !important;
 }
 
 .website-card img:hover {
